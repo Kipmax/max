@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>my web page</title>
+    <style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin:auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 7px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0,6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name:fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+ 
+</head>
+
+<body>
+	<div class="menu">
+		
+        <nav>
+            <label class="logo">Maxx</label>
+            <ul>
+                
+                 <li>
+                    <a href="#"target="_parent"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                </li>
+                 <li>
+                    <a href="information2.html"target="_parent"><i class="fa fa-question" aria-hidden="true"></i> info</a>
+                </li>
+
+                <li>
+                    <a href="about2.html"target="_parent"><i class="fa fa-book" aria-hidden="true"></i> About</a>
+                </li>
+                <li>
+                    <a href="contact2.html"target="_parent"><i class="fa fa-phone" aria-hidden="true"></i> Contact us</a>
+                </li>
+        
+    </div>
+    <div class="slideshows">
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="slider/slider1.jpg" style="width:100%">
+  <div class="text">Car one</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="slider/slider2.jpg" style="width:100%">
+  <div class="text">Car Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="slider/slider3.jpg" style="width:100%">
+  <div class="text">Car Three</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="slider/slider4.jpg" style="width:100%">
+  <div class="text">Car four</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+ </div>
+   
+<div class="articles-side">
+    <div class="box-1">
+            <div class="article-box">
+                <img src="atrimg/benz/artimg1.jpg"> <button>Explore</button>
+                <h1>Porsche</h1>
+                <p>Porsche is a renowned German luxury car brand known for producing some of the most iconic and high-performance sports cars in the world. The company was founded in 1931 by Ferdinand Porsche and has since become a symbol of excellence in engineering and design. From the classic Porsche 911 to the latest electric Taycan, Porsche has a rich history of innovation and pushing the boundaries of automotive technology. With a strong focus on driving pleasure, Porsche's cars are not only fast and powerful but also offer exceptional handling and agility. The company also has a successful motorsport heritage, with numerous wins in prestigious races like the Le Mans 24-hour and the Formula One world championship. Today, Porsche continues to be a top choice for car enthusiasts who value performance, style, and quality.</p>
+            </div>
+            <div class="article-box">
+                <img src="atrimg/benz/artimg2.jpg"> <button>Explore</button>
+                <h1>Subaru</h1>
+                <p>Subaru is a Japanese automotive manufacturer known for producing reliable and versatile vehicles that are popular with drivers around the world. The company's lineup includes popular models such as the Outback, Forester, and Impreza, all of which feature all-wheel drive and a reputation for safety and durability. Subaru has also gained a following among performance enthusiasts thanks to its WRX and WRX STI models, which offer turbocharged engines and sport-tuned suspensions. In recent years, Subaru has emphasized its commitment to sustainability and environmental responsibility, with initiatives such as its zero-landfill factory in Indiana and the launch of its first all-electric vehicle, the Solterra.</p>
+            </div>
+             <div class="article-box">
+                <img src="atrimg/benz/artimg3.jpg"> <button>Explore</button>
+                 <h1>Nissan</h1>
+                <p>Nissan is a multinational automotive manufacturer headquartered in Japan. With a history dating back to 1933, the company has established itself as a major player in the global automotive industry, producing a wide range of cars, trucks, and SUVs. Nissan is known for its innovative approach to design and technology, with a focus on creating vehicles that are both practical and stylish. The company has a strong commitment to sustainability and has been at the forefront of developing electric and hybrid vehicles. Overall, Nissan has a reputation for producing high-quality vehicles that are reliable, efficient, and fun to drive. </p>
+            </div>
+             <div class="article-box">
+                <img src="atrimg/benz/artimg4.jpg"> <button>Explore</button>
+                 <h1>Mercedes Benz</h1>
+                <p>Mercedes-Benz is a globally renowned luxury car manufacturer that has been producing high-quality vehicles for over a century. Founded in 1926, the company is known for its commitment to innovation, safety, and style. With a range of models from sedans to SUVs, Mercedes-Benz is a symbol of sophistication and class. Their vehicles are equipped with state-of-the-art technology, including advanced safety features and cutting-edge entertainment systems. Whether you're looking for a sleek and sporty coupe or a spacious and comfortable family car, Mercedes-Benz has a model to suit your needs. With a reputation for excellence and a commitment to quality, Mercedes-Benz continues to set the standard for luxury vehicles. </p>
+            </div>
+          
+    </div>
+    <div class="box-2">
+            <div class="article-box">
+                <img src="atrimg/ferrari/ferrari1.jpg"> <button>Explore</button>
+                 <h1>Lamborghini</h1>
+                 <p>Lamborghini is a prestigious Italian luxury car manufacturer that is renowned for its high-performance sports cars. Founded in 1963 by Ferruccio Lamborghini, the company has a rich history of creating some of the world's most iconic and sought-after vehicles. Lamborghini's signature design features angular lines, aggressive styling, and a distinctive roar that sets it apart from other supercar brands. The company's commitment to innovation has led to the development of advanced technologies, such as carbon fiber construction and active aerodynamics, that make their cars not only fast but also efficient and safe. Today, Lamborghini continues to produce some of the most desirable cars on the planet, making it a symbol of status and luxury for car enthusiasts worldwide. </p>
+            </div>
+            <div class="article-box">
+                <img src="atrimg/ferrari/ferrari2.jpg"> <button>Explore</button>
+                 <h1>Ferrari</h1>
+                <p>Ferrari is an iconic Italian sports car manufacturer that has been synonymous with speed, luxury, and performance for decades. Founded in 1947 by Enzo Ferrari, the company has built a reputation for producing some of the most beautiful and powerful cars on the planet. From the classic Ferrari 250 GTO to the modern LaFerrari hybrid, each Ferrari model is a testament to the brand's commitment to innovation and excellence. Today, Ferrari is not just a car brand, but a symbol of passion, style, and the ultimate driving experience. Whether you're a car enthusiast or not, it's hard not to be impressed by the sleek design, roaring engines, and sheer speed of a Ferrari.</p>
+            </div>
+             <div class="article-box">
+                <img src="atrimg/ferrari/ferrari3.jpg"> <button>Explore</button>
+                 <h1>Audi</h1>
+                <p>Audi is a German luxury car manufacturer known for its stylish design, advanced technology, and high-performance vehicles. Founded in 1909, Audi has become a globally recognized brand with a reputation for engineering excellence and innovative solutions. Audi is committed to sustainability and has made significant strides in developing electric and hybrid vehicles. Its popular models include the Audi A4, A6, and Q7, and the company has also achieved success in motorsport, winning the prestigious 24 Hours of Le Mans race 13 times. With a focus on quality, reliability, and cutting-edge design, Audi remains a leading player in the luxury car market. </p>
+            </div>
+             <div class="article-box">
+                <img src="atrimg/ferrari/ferrari1.jpg"> <button>Explore</button>
+                 <h1>Bmw</h1>
+                <p>BMW, also known as Bayerische Motoren Werke AG, is a German multinational corporation that produces luxury vehicles and motorcycles. Founded in 1916, BMW has become synonymous with high-quality engineering and sleek design, making it one of the world's most recognizable automotive brands. The company's iconic logo, featuring a blue and white propeller, pays homage to its early roots in aviation technology. Today, BMW offers a wide range of vehicles, from sporty coupes and sedans to spacious SUVs, and is committed to advancing electric and hybrid technologies. With a focus on innovation and a dedication to exceptional performance, BMW continues to set the standard for luxury vehicles.</p>
+            </div>
+    </div>
+    <div class="box-3">
+             <div class="article-box">
+                <img src="atrimg/porsche/porsche1.jpg"> <button>Explore</button>
+                 <h1>Bugatti</h1>
+                <p>Bugatti is a French luxury car brand known for its exquisite design, exceptional performance, and unparalleled engineering. Founded in 1909 by Ettore Bugatti, the company quickly became a symbol of speed and elegance, winning numerous races and setting multiple records. Today, Bugatti is renowned for producing some of the most expensive and exclusive cars in the world, such as the Bugatti Chiron, which boasts a top speed of 304 mph and a price tag of over $3 million. With a long and storied history of innovation and excellence, Bugatti remains a true icon of the automotive industry. </p>
+            </div>
+            <div class="article-box">
+                <img src="atrimg/porsche/porsche2.jpg"> <button>Explore</button>
+                 <h1>RollsRoyce</h1>
+                <p>Rolls-Royce is a British luxury car manufacturer known for its iconic and opulent vehicles. Founded in 1904, Rolls-Royce has a rich history of producing some of the most elegant and prestigious cars in the world, favored by royalty, celebrities, and the ultra-wealthy. Today, Rolls-Royce continues to push the boundaries of luxury with their handcrafted vehicles, boasting features such as custom coachwork, personalized interior designs, and cutting-edge technology. Beyond their cars, Rolls-Royce is also known for its aero engines, marine propulsion systems, and power generation equipment, making it a leading global provider of high-performance engineering solutions.</p>
+            </div>
+            <div class="article-box">
+                <img src="atrimg/porsche/porsche3.jpg"> <button>Explore</button>
+                 <h1>Bentley</h1>
+                <p>Bentley is a luxury car brand known for its exceptional craftsmanship and performance. Founded in 1919 by W.O. Bentley, the company has a rich history of creating high-quality vehicles that embody elegance and sophistication. From its iconic Continental GT to its luxurious Mulsanne, Bentley has become synonymous with luxury and exclusivity. The brand is renowned for its use of premium materials, such as hand-stitched leather and rare wood veneers, as well as its advanced technology and engineering. With a commitment to innovation and a dedication to creating the ultimate driving experience, Bentley continues to be a leading player in the luxury automotive industry.</p>
+            </div>
+            <div class="article-box">
+                <img src="atrimg/porsche/porsche4.jpg"> <button>Explore</button>
+                 <h1>Ford</h1>
+                <p>Ford Motor Company, commonly referred to as Ford, is a multinational automobile manufacturer founded by Henry Ford in 1903. With its headquarters in Dearborn, Michigan, USA, Ford has been a major player in the global automotive industry for over a century. The company is renowned for producing some of the most iconic vehicles in history, including the Model T and the Mustang. Today, Ford offers a wide range of vehicles, from small cars to heavy-duty trucks, and has a strong presence in markets all over the world. In recent years, the company has also been investing heavily in electric and autonomous vehicle technology, positioning itself to lead the industry into a more sustainable and connected future.</p>
+            </div>
+            <div class="article-box">
+              <img src="side/side1.jpg" style="height: 100%;width: 100%;">
+              <img src="side/side2.jpg" style="height: 100%;width: 100%;">
+            </div>
+
+    </div>    
+</div>
+   
+<footer>copyright@maxwelkiprotich</footer>
+</body>
+
+</html>
